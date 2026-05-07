@@ -84,8 +84,8 @@ adb shell su -c 'grep libnocrash /proc/$(pidof zygote64)/maps'
 adb shell su -c 'cat /sys/bus/platform/devices/17c10000.qcom,wdt/disable'
 # Should output: 0
 ```
-
-**   Tested On:  **   
+  
+**Tested On:**   
   
 Samsung Galaxy S20 FE 5G (r8q, SM-G780G)  
 LineageOS 23.2-20260411-NIGHTLY  
