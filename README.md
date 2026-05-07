@@ -78,6 +78,7 @@ adb reboot
 ```bash
 # Check if library is loaded in Zygote
 adb shell su -c 'grep libnocrash /proc/$(pidof zygote64)/maps'
+# You should see /system/lib64/libnocrash.so
 
 # Check if watchdog is disabled
 adb shell su -c 'cat /sys/bus/platform/devices/17c10000.qcom,wdt/disable'
