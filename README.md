@@ -91,3 +91,25 @@ Samsung Galaxy S20 FE 5G (r8q, SM-G780G)
 LineageOS 23.2-20260411-NIGHTLY  
 Linux Kernel 4.19.325-cip128-st12-perf  
 Snapdragon 865 (kona)  
+
+   
+## Extra: Test if your hardware is defective
+  
+Check total RAM  
+```bash
+adb shell su -c 'cat /proc/meminfo | grep MemTotal'
+```
+  
+Push memtester and test half your RAM. Never test all of it at once, leave  
+some free so Android stays alive.  
+Run multiple times: you can't specify physical address ranges, so multiple  
+runs are needed to hopefully hit every physical chip.  
+```bash
+adb push memtester-4.6.0/memtester /data/local/tmp/
+adb shell su -c 'chmod +x /data/local/tmp/memtester && /data/local/tmp/memtester 2000M 1'
+```
+  
+Check kernel log for hardware faults (more reliable than memtester)
+```bash
+adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
+```
