@@ -103,8 +103,9 @@ some free so Android stays alive.
 Run multiple times: you can't specify physical address ranges, so multiple  
 runs are needed to hopefully hit every physical chip.  
 ```bash
-adb push memtester-4.6.0/memtester /data/local/tmp/
-adb shell su -c 'chmod +x /data/local/tmp/memtester && /data/local/tmp/memtester 2000M 1'
+adb push memtester /data/local/tmp/
+adb shell su -c 'chmod +x /data/local/tmp/memtester'
+adb shell su -c '/data/local/tmp/memtester 2500M 1'
 ```
   
 Check kernel log for hardware faults (more reliable than memtester)
