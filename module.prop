@@ -1,0 +1,6 @@
+id=nocrash
+name=Crash Ignore
+version=1
+versionCode=1
+author=you
+description=Prevents SIGBUS/SIGILL crashes system-wide
