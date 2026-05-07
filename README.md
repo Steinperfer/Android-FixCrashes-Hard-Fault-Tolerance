@@ -1,14 +1,18 @@
 # Android-Hard-Fault-Tolerance
-Fix if your Android device constantly freezes and reboots. Caused by CPU errors from  defective hardware or broken kernels - this patch makes Android ignore the fatal errors instead of crashing. Does NOT fix the underlying hardware problem.
+Fix if your Android device constantly freezes and reboots. Caused by CPU errors from  defective hardware or broken kernels - this patch makes Android ignore the fatal errors instead of crashing. Does NOT fix the underlying hardware problem.  
 
-Your Android device freezes and reboots multiple times per hour? Apps crash immediately 
-on launch? System UI hangs until watchdog kicks in?
+Your Android device freezes and reboots multiple times per hour? Apps crash immediately   
+on launch? System UI hangs until watchdog kicks in?  
 
-This happens when your device has **defective RAM/SoC** or runs a **broken kernel** 
-(common on LineageOS nightly builds). The CPU throws SIGBUS, SIGILL, SIGSEGV signals 
-that Android treats as fatal - killing your apps or triggering a hardware watchdog reset.
+This happens when your device has **defective RAM/SoC** or runs a **broken kernel**   
+(common on LineageOS nightly builds). The CPU throws SIGBUS, SIGILL, SIGSEGV signals   
+that Android treats as fatal - killing your apps or triggering a hardware watchdog reset.  
 
-**This module makes Android ignore those errors instead of dying.**
+**This module makes Android ignore those errors instead of dying.**  
+
+# Disclaimer  
+This is a band-aid for dying hardware. If your device has physical RAM defects,  
+replace it. This module only makes it usable until you can get a new device  
 
 > ⚠️ This does NOT fix broken hardware. It hides the symptoms so your device becomes 
 > usable again. Silenced errors may cause silent data corruption in affected memory regions.
@@ -39,13 +43,13 @@ that Android treats as fatal - killing your apps or triggering a hardware watchd
 ## Installation
 
 
-1. Compile the signal handler
+**   1. Compile the signal handler**   
    
 ```bash
 aarch64-linux-android30-clang -shared -fPIC -o libnocrash.so sigfix.c
 ```
 
-2. Push to device
+**   2. Push to device**   
    
 ```bash
 adb push libnocrash.so /data/local/tmp/
@@ -54,7 +58,7 @@ adb push post-fs-data.sh /data/local/tmp/
 adb push system.prop /data/local/tmp/
 ```
 
-3. Install as Magisk module
+**   3. Install as Magisk module**   
    
 ```bash
 adb shell su -c 'mkdir -p /data/adb/modules/nocrash/system/lib64'
@@ -65,7 +69,7 @@ adb shell su -c 'cp /data/local/tmp/system.prop /data/adb/modules/nocrash/'
 adb shell su -c 'chmod 755 /data/adb/modules/nocrash/post-fs-data.sh'
 ```
 
-4. Reboot
+**   4. Reboot**   
    
 ```bash
 adb reboot
@@ -81,7 +85,7 @@ adb shell su -c 'cat /sys/bus/platform/devices/17c10000.qcom,wdt/disable'
 # Should output: 0
 ```
 
-Tested On:  
+**   Tested On:  **   
   
 Samsung Galaxy S20 FE 5G (r8q, SM-G780G)  
 LineageOS 23.2-20260411-NIGHTLY  
