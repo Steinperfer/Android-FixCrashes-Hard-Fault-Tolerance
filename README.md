@@ -1,12 +1,10 @@
 # Android-Hard-Fault-Tolerance
-Fix if your Android device constantly freezes and reboots. Caused by CPU errors from  defective hardware or broken kernels - this patch makes Android ignore the fatal errors instead of crashing. Does NOT fix the underlying hardware problem.  
-
 Your Android device freezes and reboots multiple times per hour? Apps crash immediately   
 on launch? System UI hangs until watchdog kicks in?  
 
-This happens when your device has **defective RAM/SoC** or runs a **broken kernel**   
+This can happen when your device has **defective RAM/SoC** or runs a **broken kernel**   
 (common on LineageOS nightly builds). The CPU throws SIGBUS, SIGILL, SIGSEGV signals   
-that Android treats as fatal - killing your apps or triggering a hardware watchdog reset.  
+that Android treats as fatal and will kill your apps or trigger a hardware watchdog reset.  
 
 **This module makes Android ignore those errors instead of dying.**  
 
