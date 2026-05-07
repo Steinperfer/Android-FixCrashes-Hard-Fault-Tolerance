@@ -22,7 +22,7 @@ replace it. This module only makes it usable until you can get a new device
 | SIGBUS (bad memory alignment) | App crash | Ignored, app continues |
 | SIGILL (illegal instruction) | App crash | Ignored, app continues |
 | SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
-| Hardware watchdog timeout | Device reboots | Watchdog disabled |
+| Hardware watchdog timeout | Device reboots | Watchdog disabled, device stays up |
 
 ## How It Works
 
@@ -65,6 +65,7 @@ adb shell su -c 'cp /data/local/tmp/module.prop /data/adb/modules/nocrash/'
 adb shell su -c 'cp /data/local/tmp/post-fs-data.sh /data/adb/modules/nocrash/'
 adb shell su -c 'cp /data/local/tmp/system.prop /data/adb/modules/nocrash/'
 adb shell su -c 'chmod 755 /data/adb/modules/nocrash/post-fs-data.sh'
+adb shell su -c 'chmod 644 /data/adb/modules/nocrash/system/lib64/libnocrash.so'
 ```
 
 **   4. Reboot**   
