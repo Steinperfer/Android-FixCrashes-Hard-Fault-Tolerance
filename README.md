@@ -81,9 +81,9 @@ adb shell su -c 'cat /sys/bus/platform/devices/17c10000.qcom,wdt/disable'
 # Should output: 0
 ```
 
-Tested On:
-
-Samsung Galaxy S20 FE 5G (r8q, SM-G780G)
-LineageOS 23.2-20260411-NIGHTLY
-Linux Kernel 4.19.325-cip128-st12-perf
-Snapdragon 865 (kona)
+Tested On:  
+  
+Samsung Galaxy S20 FE 5G (r8q, SM-G780G)  
+LineageOS 23.2-20260411-NIGHTLY  
+Linux Kernel 4.19.325-cip128-st12-perf  
+Snapdragon 865 (kona)  
