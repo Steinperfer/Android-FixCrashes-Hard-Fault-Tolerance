@@ -36,7 +36,7 @@ replace it. This module only makes it usable until you can get a new device
 
 ## Requirements
 
-- Rooted Android device with Magisk 24+
+- **Rooted Android device with Magisk 24+**
 - ARM64 architecture (Snapdragon 865 or newer)
 - Working ADB connection
 
