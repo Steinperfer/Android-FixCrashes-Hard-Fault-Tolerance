@@ -95,6 +95,13 @@ Linux Kernel 4.19.325-cip128-st12-perf
 Snapdragon 865 (kona)  
   
 # # if it still crashes, just post the adb error log
+
+```
+#get the time
+adb logcat -b all -d | grep -
+#change the time
+adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
+```
    
 ## Extra: Test if your hardware is defective
   
