@@ -42,8 +42,8 @@ replace it. This module only makes it usable until you can get a new device
 
 ## Compatility
 
-| Samsung | Xiaomi | Poco | Redmi | OnePlus | Sony | ASUS | Oppo | Realme | Motorola | Black Shark | ZTE | Nubia | Lenovo | Meizu | Vivo | iQOO | LG | Sharp | Fujitsu | Google
-| Galaxy S20, S20+, S20 Ultra, S20 FE 5G, S20 FE 4G (G780G), Note 20, Note 20 Ultra, Z Fold 2, Z Flip 5G, Tab S7, Tab S7+ | Mi 10, Mi 10 Pro, Mi 10 Ultra, Mi 10T, Mi 10T Pro, Mi 10i, Mi 10S, Mi 11X | Poco F2 Pro, Poco F3 | K30 Pro, K30 Pro Zoom, K30S, K40 | Black Shark 3, 3 Pro, 3S, 4 | OnePlus 8, 8 Pro, 8T, 9R | Xperia 1 II, Xperia 5 II, Xperia Pro | ROG Phone 3, 3 Strix, Zenfone 7, 7 Pro | Find X2, X2 Pro, X3 Neo, Reno 4 Pro 5G, Reno 6 Pro+ 5G | Realme X50 Pro, X7 Pro Extreme, GT Neo 2, GT Master Explorer | NEX 3S 5G, iQOO 3, 5, 5 Pro, Neo 3, Neo 5 | Edge+ (2020), Edge S, Moto G100 | Legion Duel, Legion Duel 2 (SD870) | Axon 10 Pro 5G, Axon 30 5G, Axon 30 Pro | Red Magic 5G, 5S, 6R | V60 ThinQ, Velvet 5G, Wing | AQUOS R5G | Arrows 5G | Meizu 17, 17 Pro, 18s
+| Samsung | Xiaomi | Poco | Redmi | OnePlus | Sony | ASUS | Oppo | Realme | Motorola | Black Shark | ZTE | Nubia | Lenovo | Meizu | Vivo | iQOO | LG | Sharp | Fujitsu | Google |
+| Galaxy S20, S20+, S20 Ultra, S20 FE 5G, S20 FE 4G (G780G), Note 20, Note 20 Ultra, Z Fold 2, Z Flip 5G, Tab S7, Tab S7+ | Mi 10, Mi 10 Pro, Mi 10 Ultra, Mi 10T, Mi 10T Pro, Mi 10i, Mi 10S, Mi 11X | Poco F2 Pro, Poco F3 | K30 Pro, K30 Pro Zoom, K30S, K40 | Black Shark 3, 3 Pro, 3S, 4 | OnePlus 8, 8 Pro, 8T, 9R | Xperia 1 II, Xperia 5 II, Xperia Pro | ROG Phone 3, 3 Strix, Zenfone 7, 7 Pro | Find X2, X2 Pro, X3 Neo, Reno 4 Pro 5G, Reno 6 Pro+ 5G | Realme X50 Pro, X7 Pro Extreme, GT Neo 2, GT Master Explorer | NEX 3S 5G, iQOO 3, 5, 5 Pro, Neo 3, Neo 5 | Edge+ (2020), Edge S, Moto G100 | Legion Duel, Legion Duel 2 (SD870) | Axon 10 Pro 5G, Axon 30 5G, Axon 30 Pro | Red Magic 5G, 5S, 6R | V60 ThinQ, Velvet 5G, Wing | AQUOS R5G | Arrows 5G | Meizu 17, 17 Pro, 18s |
   
 ## Installation
 **   0. Download**  
