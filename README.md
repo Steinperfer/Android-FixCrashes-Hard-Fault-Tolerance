@@ -110,7 +110,7 @@ Snapdragon 865 (kona)
 # My experience
   Bevor i fixed the exact same tinhgs this repo does, I had 1-2 Reboots every Hour, sometimes more, sometimes less.  
   I Tested this exact version of the repo, for 2days now ad had not a single crash/reboot/soft reboot.  
-  Be Aweare that you might fry your bootloader or system if your smartphone has not a ARMv8-A CPU Architekture
+  Be Aweare that you might fry your bootloader or system if your smartphone has not a ARMv8-A CPU Architekture or does not like being patched.  
 
   
 # # if it still crashes, just post the adb error log
