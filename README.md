@@ -39,16 +39,20 @@ replace it. This module only makes it usable until you can get a new device
 - Rooted Android device with Magisk 24+
 - ARM64 architecture (Snapdragon 865 or newer)
 - Working ADB connection
-
+  
 ## Installation
-
-
-**   1. Compile the signal handler**   
-   
+**   0. Download**  
+```bash
+git clone https://github.com/Steinperfer/Android-FixCrashes-Hard-Fault-Tolerance.git
+cd Android-FixCrashes-Hard-Fault-Tolerance/
+```
+  
+**   1. Compile the signal handler** You can skip this    
+    
 ```bash
 aarch64-linux-android30-clang -shared -fPIC -o libnocrash.so sigfix.c
 ```
-
+  
 **   2. Push to device**   
    
 ```bash
