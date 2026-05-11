@@ -40,9 +40,9 @@ replace it. This module only makes it usable until you can get a new device
 - ARM64 architecture (Snapdragon 865 or newer)
 - Working ADB connection
 
-## Compatility
+## Compatibility
 
-
+  
 | Marken | Samsung | Xiaomi | Poco | Redmi | Black Shark | OnePlus | Sony | ASUS | OPPO | Realme | Vivo / iQOO | Motorola | Lenovo | ZTE / Nubia | LG | Sharp / Fujitsu / Meizu |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | **Modelle** | `S20 (All)`, `S20 FE (G780G/G781B)`, `Note 20 (All)`, `Z Fold 2`, `Z Flip 5G`, `Tab S7/+` | `Mi 10`, `Pro`, `Ultra`, `10T`, `10T Pro`, `10i`, `10S`, `11X` | `F2 Pro`, `F3` | `K30 Pro`, `K30 Pro Zoom`, `K30S`, `K40` | `Black Shark 3`, `3 Pro`, `3S`, `4` | `8`, `8 Pro`, `8T`, `9R` | `Xperia 1 II`, `5 II`, `Pro` | `ROG Phone 3`, `3 Strix`, `Zenfone 7`, `7 Pro` | `Find X2`, `X2 Pro`, `X3 Neo`, `Reno 4 Pro 5G`, `Reno 6 Pro+` | `X50 Pro`, `X7 Pro Extreme`, `GT Neo 2`, `GT Master Explorer` | `NEX 3S 5G`, `iQOO 3`, `5`, `5 Pro`, `Neo 3`, `Neo 5` | `Edge+ (2020)`, `Edge S`, `Moto G100` | `Legion Duel`, `Legion Duel 2` | `Axon 10 Pro 5G`, `30 5G`, `30 Pro`, `Red Magic 5G`, `5S`, `6R` | `V60 ThinQ`, `Velvet 5G`, `Wing` | `AQUOS R5G`, `Arrows 5G`, `Meizu 17`, `17 Pro`, `18s` |
