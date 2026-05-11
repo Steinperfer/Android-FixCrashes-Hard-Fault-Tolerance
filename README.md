@@ -89,9 +89,9 @@ Linux Kernel 4.19.325-cip128-st12-perf
 Snapdragon 865 (kona)  
   
 # My experience
-  Bevor i fixed the exact same tinhgs this repo does, I had 1-2 Reboots every Hour, sometimes more, sometimes less.  
-  I Tested this exact version of the repo, for 2days now ad had not a single crash/reboot/soft reboot.  
-  Be Aweare that you might fry your bootloader or system if your smartphone has not a ARMv8-A CPU Architekture or does not like being patched.  
+  Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour, sometimes more, sometimes less.  
+  I Tested this exact version of the repo, for 2days now, and had not a single crash/reboot/soft reboot.  
+  Be Aweare that you might fry your bootloader, or system.
 
   
 # # if it still crashes, just post the adb error log
@@ -102,6 +102,14 @@ adb logcat -b all -d | grep -
 #change the time
 adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
 ```
+
+# Your Phone is not in the Compatibility list?  
+1. Check whether I have overlooked your model by verifying if your CPU architecture is ARMv8-A.  
+2. The biggest problem is that your system handles hardware errors differently.  
+   If you still wish to try this method, you must identify the correct paths.  
+   You could either try to understand what the script does and where the files need to go on your system,  
+   or ask an LLM to change the paths from installation steps 2 and 3 to the corresponding paths on your system.  
+  
    
 ## Extra: Test if your hardware is defective
   
