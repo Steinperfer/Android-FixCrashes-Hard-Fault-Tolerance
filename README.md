@@ -30,20 +30,20 @@ replace it. This module only makes it usable until you can get a new device
 
   
 ## Installation
-**   0. Download**  
+**0. Download**  
   
 ```bash
 git clone https://github.com/Steinperfer/Android-FixCrashes-Hard-Fault-Tolerance.git
 cd Android-FixCrashes-Hard-Fault-Tolerance/
 ```
   
-**   1. Compile the signal handler** You can skip this    
+**1. Compile the signal handler** You can skip this    
     
 ```bash
 aarch64-linux-android30-clang -shared -fPIC -o libnocrash.so sigfix.c
 ```
   
-**   2. Push to device**   
+**2. Push to device**   
    
 ```bash
 adb push libnocrash.so /data/local/tmp/
@@ -52,7 +52,7 @@ adb push post-fs-data.sh /data/local/tmp/
 adb push system.prop /data/local/tmp/
 ```
 
-**   3. Install as Magisk module**   
+**3. Install as Magisk module**   
    
 ```bash
 adb shell su -c 'mkdir -p /data/adb/modules/nocrash/system/lib64'
@@ -64,7 +64,7 @@ adb shell su -c 'chmod 755 /data/adb/modules/nocrash/post-fs-data.sh'
 adb shell su -c 'chmod 644 /data/adb/modules/nocrash/system/lib64/libnocrash.so'
 ```
 
-**   4. Reboot**   
+**4. Reboot**   
    
 ```bash
 adb reboot
