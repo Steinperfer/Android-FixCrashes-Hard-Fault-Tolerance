@@ -18,7 +18,7 @@ replace it. This module only makes it usable until you can get a new device
 ## Requirements
 
 - **Rooted Android device with Magisk 24+**
-- ARM64 architecture (Snapdragon 865 or newer)
+- ARMv8-A architecture (ONLY TESTED ON Snapdragon 865)
 - Working ADB connection
 
 ## Compatibility
