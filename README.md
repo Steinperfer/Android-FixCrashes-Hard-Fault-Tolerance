@@ -2,9 +2,9 @@
 Your Android device freezes and reboots multiple times per hour? Apps crash immediately   
 on launch? Just want to watch instagram or need to film something important but your phone freezes?  
 
-This can happen when your device has **defective RAM/SoC** or runs a **broken kernel**   
-(common on LineageOS nightly builds). The CPU throws SIGBUS, SIGILL, SIGSEGV signals   
-that Android treats as fatal and will kill your apps or trigger a hardware watchdog reset.  
+This can happen when your device has **defective RAM/SoC** or runs a **broken kernel**.  
+The CPU throws SIGBUS, SIGILL, SIGSEGV, SIGTRAP signals   
+that Android treats as fatal and will kill your apps or trigger a reboot/watchdog.  
 
 **This module makes Android ignore those errors instead of dying.**  
 
