@@ -1,6 +1,6 @@
 # Android-Hard-Fault-Tolerance
 Your Android device freezes and reboots multiple times per hour? Apps crash immediately   
-on launch? System UI hangs until watchdog kicks in?  
+on launch? Just want to watch instagram or need to film something important but your phone freezes?  
 
 This can happen when your device has **defective RAM/SoC** or runs a **broken kernel**   
 (common on LineageOS nightly builds). The CPU throws SIGBUS, SIGILL, SIGSEGV signals   
