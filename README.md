@@ -4,7 +4,7 @@ on launch? Just want to watch instagram or need to film something important but 
 
 This can happen when your device has **defective RAM/SoC** or runs a **broken kernel**.  
 The CPU throws SIGBUS, SIGILL, SIGSEGV, SIGTRAP signals   
-that Android treats as fatal and will kill your apps or trigger a reboot/watchdog.  
+that Android treats as fatal and will kill your apps or trigger a reboot.  
 
 **This module makes Android ignore those errors instead of dying.**  
 
@@ -136,13 +136,11 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 | SIGILL (illegal instruction) | App crash | Ignored, app continues |
 | SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
 | SIGTRAP (breakpoint trap) | App crash | Ignored, app continues |
-| Hardware watchdog timeout | Device reboots | Watchdog disabled, device stays up |
-
+  
 ## How It Works
 
 1. **libnocrash.so** - Native signal handler that catches SIGBUS, SIGILL, SIGSEGV, and SIGTRAP before Android's crash handler does
 2. **Magisk module** - Injects the library into Zygote so every app process inherits it
 3. **LD_PRELOAD** - Ensures the handler loads before ART and GC threads
-4. **Watchdog disabler** - Unbinds the Qualcomm MSM watchdog driver on boot
-5. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores
+4. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores
 6. **Native bridge** - Forces early loading via `ro.dalvik.vm.native.bridge`
