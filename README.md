@@ -97,10 +97,10 @@ Snapdragon 865 (kona)
 # # if it still crashes, just post the adb error log
 
 ```
-#get the time
-adb logcat -b all -d | grep -
 #change the time
 adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
+#Check kernel log for hardware faults (more reliable than memtester)
+adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
 ```
 
 # Your Phone is not in the Compatibility list?  
@@ -126,11 +126,6 @@ runs are needed to hopefully hit every physical chip.
 adb push memtester /data/local/tmp/
 adb shell su -c 'chmod +x /data/local/tmp/memtester'
 adb shell su -c '/data/local/tmp/memtester 2500M 1'
-```
-  
-Check kernel log for hardware faults (more reliable than memtester)
-```bash
-adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
 ```
   
 ## What It Does
