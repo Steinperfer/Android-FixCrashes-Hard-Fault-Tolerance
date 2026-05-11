@@ -105,7 +105,7 @@ adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal
 
 # Your Phone is not in the Compatibility list?  
 1. Check whether I have overlooked your model by verifying if your CPU architecture is ARMv8-A.  
-2. The biggest problem is that your system handles hardware errors differently.  
+2. If not, the biggest problem is that your system handles hardware errors differently.  
    If you still wish to try this method, you must identify the correct paths.  
    You could either try to understand what the script does and where the files need to go on your system,  
    or ask an LLM to change the paths from installation steps 2 and 3 to the corresponding paths on your system.  
