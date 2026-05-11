@@ -14,26 +14,7 @@ replace it. This module only makes it usable until you can get a new device
 
 > ⚠️ This does NOT fix broken hardware. It hides the symptoms so your device becomes 
 > usable again. Silenced errors may cause silent data corruption in affected memory regions.
-
-## What It Does
-
-| Problem | Without Fix | With Fix |
-|---------|------------|----------|
-| SIGBUS (bad memory alignment) | App crash | Ignored, app continues |
-| SIGILL (illegal instruction) | App crash | Ignored, app continues |
-| SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
-| SIGTRAP (breakpoint trap) | App crash | Ignored, app continues |
-| Hardware watchdog timeout | Device reboots | Watchdog disabled, device stays up |
-
-## How It Works
-
-1. **libnocrash.so** - Native signal handler that catches SIGBUS, SIGILL, SIGSEGV, and SIGTRAP before Android's crash handler does
-2. **Magisk module** - Injects the library into Zygote so every app process inherits it
-3. **LD_PRELOAD** - Ensures the handler loads before ART and GC threads
-4. **Watchdog disabler** - Unbinds the Qualcomm MSM watchdog driver on boot
-5. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores
-6. **Native bridge** - Forces early loading via `ro.dalvik.vm.native.bridge`
-
+  
 ## Requirements
 
 - **Rooted Android device with Magisk 24+**
@@ -143,3 +124,22 @@ Check kernel log for hardware faults (more reliable than memtester)
 ```bash
 adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
 ```
+  
+## What It Does
+
+| Problem | Without Fix | With Fix |
+|---------|------------|----------|
+| SIGBUS (bad memory alignment) | App crash | Ignored, app continues |
+| SIGILL (illegal instruction) | App crash | Ignored, app continues |
+| SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
+| SIGTRAP (breakpoint trap) | App crash | Ignored, app continues |
+| Hardware watchdog timeout | Device reboots | Watchdog disabled, device stays up |
+
+## How It Works
+
+1. **libnocrash.so** - Native signal handler that catches SIGBUS, SIGILL, SIGSEGV, and SIGTRAP before Android's crash handler does
+2. **Magisk module** - Injects the library into Zygote so every app process inherits it
+3. **LD_PRELOAD** - Ensures the handler loads before ART and GC threads
+4. **Watchdog disabler** - Unbinds the Qualcomm MSM watchdog driver on boot
+5. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores
+6. **Native bridge** - Forces early loading via `ro.dalvik.vm.native.bridge`
