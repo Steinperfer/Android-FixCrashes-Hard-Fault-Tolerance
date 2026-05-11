@@ -94,6 +94,7 @@ LineageOS 23.2-20260411-NIGHTLY
 Linux Kernel 4.19.325-cip128-st12-perf  
 Snapdragon 865 (kona)  
 
+# If it still crashes, just post the adb error log
    
 ## Extra: Test if your hardware is defective
   
