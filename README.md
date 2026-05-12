@@ -90,7 +90,7 @@ Snapdragon 865 (kona)
   
 # My experience
   Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour, sometimes more, sometimes less.  
-  I tested this exact version of the repo, for 3days now, and had not a single crash/reboot/soft reboot because of bad hardware.  
+  I tested this exact version of the repo, for **4days now, and had not a single crash/reboot/soft reboot** because of bad hardware.  
   Be Aweare that you might fry your system.
 
   
