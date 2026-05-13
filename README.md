@@ -91,7 +91,8 @@ Snapdragon 865 (kona)
 # My experience
   Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour, sometimes more, sometimes less.  
   I tested this exact version of the repo, for **4days now, and had not a single crash/reboot/soft reboot** because of hardware problems.  
-  If it keeps crashing, there might be some other software problems with your phone, Be Aweare that you might fry your system.
+  If it keeps crashing, there might be some other software problems with your phone, i had a softwarebug from lineageOS what crasht my phone aswell this fix is not in the repo.
+  Be Aweare that you might fry your system.
 
   
 # # if it still crashes, just post the adb error log
