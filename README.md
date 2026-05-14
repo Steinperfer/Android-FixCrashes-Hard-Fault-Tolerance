@@ -88,9 +88,11 @@ adb shell su -c 'grep libnocrash /proc/$(pidof zygote64)/maps'
 
 # Check if watchdog is disabled
 adb shell su -c 'cat /sys/bus/platform/devices/17c10000.qcom,wdt/disable'
-# Should output: 0
+# Should be: 0
 
-adb shell su -c 'cat /proc/$(pidof flags_health_check 2>/dev/null)/status 2>/dev/null || echo "flags_health_check now disabled"'
+# Checl Health Check
+adb shell su -c 'ls -la /system/bin/flags_health_check'
+# Should be: 0
 ```
   
 **Tested On:**   
