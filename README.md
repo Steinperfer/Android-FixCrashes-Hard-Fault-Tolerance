@@ -51,7 +51,7 @@ adb push module.prop /data/local/tmp/
 adb push post-fs-data.sh /data/local/tmp/
 adb push system.prop /data/local/tmp/
 ```
-
+  
 **3. Install as Magisk module**   
    
 ```bash
@@ -63,8 +63,17 @@ adb shell su -c 'cp /data/local/tmp/system.prop /data/adb/modules/nocrash/'
 adb shell su -c 'chmod 755 /data/adb/modules/nocrash/post-fs-data.sh'
 adb shell su -c 'chmod 644 /data/adb/modules/nocrash/system/lib64/libnocrash.so'
 ```
-
-**4. Reboot**   
+  
+**4. Deactivate Health check**
+```
+touch flags_health_check
+adb push flags_health_check /data/local/tmp/
+adb shell su -c 'mkdir -p /data/adb/modules/nocrash/system/bin'
+adb shell su -c 'cp /data/local/tmp/flags_health_check /data/adb/modules/nocrash/system/bin/'
+adb shell su -c 'chmod 644 /data/adb/modules/nocrash/system/bin/flags_health_check'
+```
+  
+**5. Reboot**   
    
 ```bash
 adb reboot
