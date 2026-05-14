@@ -151,7 +151,7 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 | SIGILL (illegal instruction) | App crash | Ignored, app continues |
 | SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
 | SIGTRAP (breakpoint trap) | App crash | Ignored, app continues |
-| Health Check | System Reboot if 4 Crash flags | Overwrite real flags |
+| Health Check | System Reboot after X Crash flags | Overwrite real flags |
   
 ## How It Works
 
