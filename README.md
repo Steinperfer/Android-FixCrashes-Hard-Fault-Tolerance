@@ -65,7 +65,8 @@ adb shell su -c 'chmod 644 /data/adb/modules/nocrash/system/lib64/libnocrash.so'
 ```
   
 **4. Deactivate Health check**
-```
+  
+```bash
 touch flags_health_check
 adb push flags_health_check /data/local/tmp/
 adb shell su -c 'mkdir -p /data/adb/modules/nocrash/system/bin'
