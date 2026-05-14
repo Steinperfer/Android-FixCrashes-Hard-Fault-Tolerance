@@ -103,7 +103,7 @@ Linux Kernel 4.19.325-cip128-st12-perf
 Snapdragon 865 (kona)  
   
 # My experience
-  Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour, sometimes more, sometimes less.  
+  Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour with apps o couldnt open until i rebootet, sometimes more, sometimes less.  
   I tested this exact version of the repo, for **1week now, and had not a single crash/reboot/soft reboot** because of hardware problems.  
   If it keeps crashing, there might be some other software problems with your phone, i had a softwarebug from lineageOS what crasht my phone aswell this fix is not included in this repo.
   Be Aweare that you might fry your system.
