@@ -15,9 +15,10 @@ echo 1 > /proc/sys/vm/overcommit_memory 2>/dev/null
 echo 80 > /proc/sys/vm/overcommit_ratio 2>/dev/null
 echo 100 > /proc/sys/vm/vfs_cache_pressure 2>/dev/null
 
-# Phantom-Process-Monitor
-setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs false
-settings put global settings_enable_monitor_phantom_procs false
+# Qualcomm Watchdog                                      
+if [ -f /sys/devices/platform/soc/17c10000.qcom,wdt/disable ]; then
+    echo 1 > /sys/devices/platform/soc/17c10000.qcom,wdt/disable
+fi
 
 # ZRAM to 6gb
 if [ -f /sys/block/zram0/disksize ]; then
