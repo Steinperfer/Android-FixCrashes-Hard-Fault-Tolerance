@@ -95,28 +95,6 @@ adb shell su -c 'ls -la /system/bin/flags_health_check'
 # Should be: 0
 ```
   
-**Tested On:**   
-  
-Samsung Galaxy S20 FE 5G (r8q, SM-G780G)  
-LineageOS 23.2-20260411-NIGHTLY  
-Linux Kernel 4.19.325-cip128-st12-perf  
-Snapdragon 865 (kona)  
-  
-# My experience
-  Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour with apps o couldnt open until i rebootet, sometimes more, sometimes less.  
-  I tested this exact version of the repo, for **1week now, and had not a single crash/reboot/soft reboot** because of hardware problems.  
-  If it keeps crashing, there might be some other software problems with your phone, i had a softwarebug from lineageOS what crasht my phone aswell this fix is not included in this repo.
-  Be Aweare that you might fry your system.
-
-  
-# # if it still crashes, just post the adb error log
-
-```
-#change the time
-adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
-#Check kernel log for hardware faults (more reliable than memtester)
-adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
-```
 
 # Your Phone is not in the Compatibility list?  
 1. Check whether I have overlooked your model by verifying if your CPU architecture is ARMv8-A.  
@@ -163,4 +141,25 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 7. **post-fs-data** - Change Sysctl like 3cToolbox panic_on_oops=0|oom_kill_allocating_task=1|overcommit_memory=1|vfs_cache_pressure=100  
 8. **ZRam** - I changed Zram to a higher number, more stability - less speed
 
-   
+**Tested On:**   
+  
+Samsung Galaxy S20 FE 5G (r8q, SM-G780G)  
+LineageOS 23.2-20260411-NIGHTLY  
+Linux Kernel 4.19.325-cip128-st12-perf  
+Snapdragon 865 (kona)  
+  
+# My experience
+  Bevor i fixed the exact same things this repo does, I had 1-2 Reboots every hour with apps o couldnt open until i rebootet, sometimes more, sometimes less.  
+  I tested this exact version of the repo, for **1week now, and had not a single crash/reboot/soft reboot** because of hardware problems.  
+  If it keeps crashing, there might be some other software problems with your phone, i had a softwarebug from lineageOS what crasht my phone aswell this fix is not included in this repo.
+  Be Aweare that you might fry your system.
+
+  
+# # if it still crashes, just post the adb error log
+
+```
+#change the time
+adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
+#Check kernel log for hardware faults (more reliable than memtester)
+adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
+```  
