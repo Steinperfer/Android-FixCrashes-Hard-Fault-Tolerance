@@ -138,8 +138,9 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 3. **LD_PRELOAD** - Ensures the handler loads before ART and GC threads   
 4. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores  
 6. **Native bridge** - Forces early loading via `ro.dalvik.vm.native.bridge`   
-7. **post-fs-data** - Change Sysctl like 3cToolbox panic_on_oops=0|oom_kill_allocating_task=1|overcommit_memory=1|vfs_cache_pressure=100  
+7. **Sysctl** - Change Like 3cToolbox panic_on_oops=0|oom_kill_allocating_task=1|overcommit_memory=1|vfs_cache_pressure=100 
 8. **ZRam** - I changed Zram to a higher number, more stability - less speed
+9. **Phantom-Process-Monitor** Kills apps with too many background processes. On defective hardware, crash loops trigger false kills, making apps unusable.
 
 **Tested On:**   
   
