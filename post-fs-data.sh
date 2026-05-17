@@ -14,3 +14,12 @@ echo 0 > /proc/sys/vm/oom_dump_tasks 2>/dev/null
 echo 1 > /proc/sys/vm/overcommit_memory 2>/dev/null
 echo 80 > /proc/sys/vm/overcommit_ratio 2>/dev/null
 echo 100 > /proc/sys/vm/vfs_cache_pressure 2>/dev/null
+
+# ZRAM to 6gb
+if [ -f /sys/block/zram0/disksize ]; then
+    swapoff /dev/block/zram0 2>/dev/null
+    echo 1 > /sys/block/zram0/reset 2>/dev/null
+    echo 6442450944 > /sys/block/zram0/disksize 2>/dev/null
+    mkswap /dev/block/zram0 2>/dev/null
+    swapon /dev/block/zram0 2>/dev/null
+fi
