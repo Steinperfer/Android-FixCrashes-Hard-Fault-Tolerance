@@ -151,7 +151,7 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 | SIGILL (illegal instruction) | App crash | Ignored, app continues |
 | SIGSEGV (invalid memory access) | App crash / reboot | Ignored, app continues |
 | SIGTRAP (breakpoint trap) | App crash | Ignored, app continues |
-| Health Check (Counts crash) | System Reboot | Overwrite real flags |
+| Software bugs cause of defect Hardware | Kernel error / reboot | Not a Singular problem |
   
 ## How It Works
 
@@ -161,3 +161,4 @@ adb shell su -c '/data/local/tmp/memtester 2500M 1'
 4. **Kernel parameters** - `noreplace-smp idle=halt` reduces load on defective CPU cores
 6. **Native bridge** - Forces early loading via `ro.dalvik.vm.native.bridge`
 7. **post-fs-data** - Change Sysctl like 3cToolbox panic_on_oops=0|oom_kill_allocating_task=1|overcommit_memory=1|vfs_cache_pressure=100
+8. **ZRam** - I changed Zram to a higher number, more stability - less speed 
