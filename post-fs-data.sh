@@ -19,11 +19,11 @@ echo 100 > /proc/sys/vm/vfs_cache_pressure 2>/dev/null
 setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs false
 settings put global settings_enable_monitor_phantom_procs false
 
-# ZRAM auf 6GB setzen
+# ZRAM auf 2GB setzen
 if [ -f /sys/block/zram0/disksize ]; then
     swapoff /dev/block/zram0 2>/dev/null
     echo 1 > /sys/block/zram0/reset 2>/dev/null
-    echo 6442450944 > /sys/block/zram0/disksize 2>/dev/null
+    echo 2147483648 > /sys/block/zram0/disksize 2>/dev/null
     mkswap /dev/block/zram0 2>/dev/null
     swapon /dev/block/zram0 2>/dev/null
 fi
