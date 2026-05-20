@@ -27,3 +27,13 @@ if [ -f /sys/block/zram0/disksize ]; then
     mkswap /dev/block/zram0 2>/dev/null
     swapon /dev/block/zram0 2>/dev/null
 fi
+
+# Low Memory Killer aggressiver
+setprop ro.lmk.critical_upgrade true
+setprop ro.lmk.upgrade_pressure 60
+setprop ro.lmk.downgrade_pressure 80
+setprop ro.config.low_ram true
+
+# ANR-Timeout 5 Sekunden
+setprop persist.sys.service_timeout 5000
+setprop persist.sys.broadcast_timeout 5000

@@ -1,1 +1,9 @@
 ro.dalvik.vm.native.bridge=libnocrash.so
+ro.zygote.preload=libnocrash.so
+persist.ldpreload=/system/lib64/libnocrash.so
+noreplace-smp
+idle=halt
+ro.lmk.critical_upgrade=true
+ro.lmk.upgrade_pressure=60
+ro.lmk.downgrade_pressure=80
+ro.config.low_ram=true
