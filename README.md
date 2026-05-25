@@ -156,11 +156,3 @@ Snapdragon 865 (kona)
   Be Aweare that you might fry your system.
 
   
-# # if it still crashes, just post the adb error log
-
-```
-#change the time
-adb logcat -b all -d -T "05-10 07:38:00.000" | grep -iE "SIGSEGV|signal 11|fatal|panic|crash|died|ANR|not responding|watchdog|binder.*died" | head -30
-#Check kernel log for hardware faults (more reliable than memtester)
-adb shell su -c 'dmesg | grep -iE "signal 11|signal 7|signal 4|bite|panic"'
-```  
