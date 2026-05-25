@@ -85,14 +85,6 @@ adb reboot
 # Check if library is loaded in Zygote
 adb shell su -c 'grep libnocrash /proc/$(pidof zygote64)/maps'
 # You should see /system/lib64/libnocrash.so
-
-# Checl Health Check
-adb shell su -c 'ls -la /system/bin/flags_health_check'
-# Should be: 0
-
-#Zram
-adb shell free -h
-#Swap should now show a total of 6B
 ```
   
 
