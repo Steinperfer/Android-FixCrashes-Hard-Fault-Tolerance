@@ -20,13 +20,13 @@ setprop persist.sys.fflag.override.settings_enable_monitor_phantom_procs false
 settings put global settings_enable_monitor_phantom_procs false
 
 # ZRAM auf 2GB setzen
-if [ -f /sys/block/zram0/disksize ]; then
-    swapoff /dev/block/zram0 2>/dev/null
-    echo 1 > /sys/block/zram0/reset 2>/dev/null
-    echo 2147483648 > /sys/block/zram0/disksize 2>/dev/null
-    mkswap /dev/block/zram0 2>/dev/null
-    swapon /dev/block/zram0 2>/dev/null
-fi
+#if [ -f /sys/block/zram0/disksize ]; then
+#    swapoff /dev/block/zram0 2>/dev/null
+#    echo 1 > /sys/block/zram0/reset 2>/dev/null
+#    echo 2147483648 > /sys/block/zram0/disksize 2>/dev/null
+#    mkswap /dev/block/zram0 2>/dev/null
+#    swapon /dev/block/zram0 2>/dev/null
+#fi
 
 # Low Memory Killer aggressiver
 setprop ro.lmk.critical_upgrade true
