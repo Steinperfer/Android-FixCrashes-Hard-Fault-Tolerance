@@ -1,3 +1,4 @@
+#!/system/bin/sh
 export LD_PRELOAD=/system/lib64/libnocrash.so
 
 # Disable Phantom Process Monitor
@@ -19,3 +20,6 @@ setprop persist.sys.broadcast_timeout 5000
 
 # Force audioserver to load signal handler
 setprop wrap.audioserver LD_PRELOAD=/system/lib64/libnocrash.so
+
+# Force ART JNI libraries to load (prevents ArtJni crash)
+setprop wrap.system_server LD_PRELOAD=/system/lib64/libnocrash.so:/system/lib64/libart.so
