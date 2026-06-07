@@ -134,7 +134,7 @@ Snapdragon 865 (kona)
   
 # My experience
   Bevor i patched my phone with this repo, I **had 1-2 Reboots every hour** with apps i couldnt open until i rebootet, sometimes more, sometimes less.  
-  I tested this patch for 1 week now, and apps only **crash every 2-4 days with mostly a reboot shortly after.**, and my phone heats upo to 50C-60C.  
+  I tested this patch for 1 week now, and apps only **crash every 2-4 days with mostly a reboot shortly after.**, and my phone heats up to 50C-60C.  
   If it keeps crashing, there might be some other software problems with your phone, i had a softwarebug from lineageOS what crasht my phone aswell this fix is not included in this repo.
   Be Aweare that you might fry your system.
 
